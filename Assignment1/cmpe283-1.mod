@@ -1,2 +1,2 @@
-/home/nakul/CMPE283_Assignments/Assignment1/cmpe283-1.o
+/home/nakul/ass1/cmpe283-1.o
 
