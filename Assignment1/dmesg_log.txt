@@ -1,0 +1,75 @@
+[ 4343.798379] CMPE 283 Assignment 1 Module Start
+[ 4343.798383] Pinbased Controls MSR: 0x3f00000016
+[ 4343.798384]   External Interrupt Exiting: Can set=Yes, Can clear=Yes
+[ 4343.798384]   NMI Exiting: Can set=Yes, Can clear=Yes
+[ 4343.798385]   Virtual NMIs: Can set=Yes, Can clear=Yes
+[ 4343.798385]   Activate VMX Preemption Timer: Can set=No, Can clear=Yes
+[ 4343.798386]   Process Posted Interrupts: Can set=No, Can clear=Yes
+[ 4343.798387] Procbased Controls MSR: 0xfff9fffe0401e172
+[ 4343.798387]   Interrupt-window exiting: Can set=Yes, Can clear=Yes
+[ 4343.798388]   Use TSC offsetting: Can set=Yes, Can clear=Yes
+[ 4343.798388]   HLT exiting: Can set=Yes, Can clear=Yes
+[ 4343.798389]   INVLPG exiting: Can set=Yes, Can clear=Yes
+[ 4343.798389]   MWAIT exiting: Can set=Yes, Can clear=Yes
+[ 4343.798390]   RDPMC exiting: Can set=Yes, Can clear=Yes
+[ 4343.798390]   RDTSC exiting: Can set=Yes, Can clear=Yes
+[ 4343.798390]   CR3-load exiting: Can set=Yes, Can clear=No
+[ 4343.798391]   CR3-store exiting: Can set=Yes, Can clear=No
+[ 4343.798391]   CR8-load exiting: Can set=Yes, Can clear=Yes
+[ 4343.798392]   CR8-store exiting: Can set=Yes, Can clear=Yes
+[ 4343.798392]   Use TPR shadow: Can set=Yes, Can clear=Yes
+[ 4343.798392]   NMI-window exiting: Can set=Yes, Can clear=Yes
+[ 4343.798393]   MOV-DR exiting: Can set=Yes, Can clear=Yes
+[ 4343.798393]   Unconditional I/O exiting: Can set=Yes, Can clear=Yes
+[ 4343.798394]   Use I/O bitmaps: Can set=Yes, Can clear=Yes
+[ 4343.798394]   Monitor trap flag: Can set=Yes, Can clear=Yes
+[ 4343.798394]   Use MSR bitmaps: Can set=Yes, Can clear=Yes
+[ 4343.798395]   MONITOR exiting: Can set=Yes, Can clear=Yes
+[ 4343.798395]   PAUSE exiting: Can set=Yes, Can clear=Yes
+[ 4343.798396]   Activate secondary controls: Can set=Yes, Can clear=Yes
+[ 4343.798396] Secondary Procbased Controls MSR: 0x153cfe00000000
+[ 4343.798397]   Virtualize APIC accesses: Can set=No, Can clear=Yes
+[ 4343.798397]   Enable EPT: Can set=Yes, Can clear=Yes
+[ 4343.798398]   Descriptor-table exiting: Can set=Yes, Can clear=Yes
+[ 4343.798398]   Enable RDTSCP: Can set=Yes, Can clear=Yes
+[ 4343.798399]   Virtualize x2APIC mode: Can set=Yes, Can clear=Yes
+[ 4343.798399]   Enable VPID: Can set=Yes, Can clear=Yes
+[ 4343.798400]   WBINVD exiting: Can set=Yes, Can clear=Yes
+[ 4343.798400]   Unrestricted guest: Can set=Yes, Can clear=Yes
+[ 4343.798400]   APIC-register virtualization: Can set=No, Can clear=Yes
+[ 4343.798401]   Virtual-interrupt delivery: Can set=No, Can clear=Yes
+[ 4343.798401]   PAUSE-loop exiting: Can set=Yes, Can clear=Yes
+[ 4343.798402]   RDRAND exiting: Can set=Yes, Can clear=Yes
+[ 4343.798402]   Enable INVPCID: Can set=Yes, Can clear=Yes
+[ 4343.798402]   Enable VM functions: Can set=Yes, Can clear=Yes
+[ 4343.798403]   VMCS shadowing: Can set=No, Can clear=Yes
+[ 4343.798403]   Enable ENCLS exiting: Can set=No, Can clear=Yes
+[ 4343.798404]   RDSEED exiting: Can set=Yes, Can clear=Yes
+[ 4343.798404]   Enable PML: Can set=No, Can clear=Yes
+[ 4343.798404]   EPT-violation #VE: Can set=Yes, Can clear=Yes
+[ 4343.798405]   Conceal VMX non-root operation from Intel PT: Can set=No, Can clear=Yes
+[ 4343.798405]   Enable XSAVES/XRSTORS: Can set=Yes, Can clear=Yes
+[ 4343.798406]   Mode-based execute control for EPT: Can set=No, Can clear=Yes
+[ 4343.798406]   Use TSC scaling: Can set=No, Can clear=Yes
+[ 4343.798407] Exit Controls MSR: 0x3fffff00036dff
+[ 4343.798407]   Save debug controls: Can set=Yes, Can clear=No
+[ 4343.798408]   Host address-space size: Can set=Yes, Can clear=Yes
+[ 4343.798408]   Load IA32_PERF_GLOBAL_CTRL: Can set=Yes, Can clear=Yes
+[ 4343.798409]   Acknowledge interrupt on exit: Can set=Yes, Can clear=Yes
+[ 4343.798409]   Save IA32_PAT: Can set=Yes, Can clear=Yes
+[ 4343.798409]   Load IA32_PAT: Can set=Yes, Can clear=Yes
+[ 4343.798410]   Save IA32_EFER: Can set=Yes, Can clear=Yes
+[ 4343.798410]   Load IA32_EFER: Can set=Yes, Can clear=Yes
+[ 4343.798411]   Save VMX-preemption timer value: Can set=No, Can clear=Yes
+[ 4343.798411]   Clear IA32_BNDCFGS: Can set=No, Can clear=Yes
+[ 4343.798411]   Conceal VM exits from Intel PT: Can set=No, Can clear=Yes
+[ 4343.798412] Entry Controls MSR: 0xf3ff000011ff
+[ 4343.798413]   Load debug controls: Can set=Yes, Can clear=No
+[ 4343.798413]   IA-32e mode guest: Can set=Yes, Can clear=Yes
+[ 4343.798413]   Entry to SMM: Can set=No, Can clear=Yes
+[ 4343.798414]   Deactivate dual-monitor treatment: Can set=No, Can clear=Yes
+[ 4343.798414]   Load IA32_PERF_GLOBAL_CTRL: Can set=Yes, Can clear=Yes
+[ 4343.798415]   Load IA32_PAT: Can set=Yes, Can clear=Yes
+[ 4343.798415]   Load IA32_EFER: Can set=Yes, Can clear=Yes
+[ 4343.798416]   Load IA32_BNDCFGS: Can set=No, Can clear=Yes
+[ 4343.798416]   Conceal VM entries from Intel PT: Can set=No, Can clear=Yes
