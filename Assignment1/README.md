@@ -8,6 +8,10 @@ Discover VMX features in our processor. The following is performed in the module
 - For each group of controls above, interpret and output the values read from the MSR to the system
 via printk(..), including if the value can be set or cleared.
 
+### **Team Members**
+
+Self
+
 ### **Implementation Steps**
 
 1. Forked the https://github.com/torvalds/linux repo
@@ -24,6 +28,10 @@ via printk(..), including if the value can be set or cleared.
 11. Inserted the module using "sudo insmod cmpe283-1.ko" (enter the password for the username when prompted)
 12. Executed "dmesg" command on the terminal to see all the kernel outputs
 13. In the end, unloaded the module by using "sudo rmmod cmpe283-1"
+
+### **Output File**
+
+https://raw.githubusercontent.com/nakul32430/CMPE283_Assignments/main/Assignment1/dmesg_log.txt
 
 ### **Issues faced**
 
