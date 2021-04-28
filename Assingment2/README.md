@@ -33,7 +33,12 @@ Self
 8. Made changes to the following files to modify CPUID emulation code in order to print number of exits and elapsed time
     - cpuid.c in linux/arch/x86/kvm
     - vmx.c in linux/arch/x86/kvm/vmx
-
+9. In vmx.c, following changes were made
+    - Declared variables to store exit counter and time elapsed during each exit. Atomic variables were used to handle concurrency
+    - The logic to increment the counter and calculate the elapsed time is implemented inside the vmx_handle_exit() function
+10. In cpuid.c, following changes were made
+    - Inside the function kvm_emulate_cpuid(), conditional statement is introduced when register eax has the value 0x4FFFFFF to store the exit counter, higher 32 bits of elapsed time, and lower 32 bits of elapsed time in registers eax, ebx, and ecx respectively.
+11. Rebuild the kernel using the same make statements as in step 6    
 
 ### **Output File**
 
