@@ -50,6 +50,10 @@ Self
         - sudo apt-get install cpuid
 14. Tested the code using **cpuid -l 0x4FFFFFE** in inner VM
 
+### **Comment on the frequency of exits – does the number of exits increase at a stable rate? Or are there more exits performed during certain VM operations? Approximately how many exits does a full VM boot entail?**
+
+After the initial VM boot, the number of exits were increasing at a stable rate. There were around 2 million exits on the full VM boot.
+
 ### **Output File**
 
 Output file link to go here
