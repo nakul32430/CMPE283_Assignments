@@ -56,8 +56,16 @@ After the initial VM boot, the number of exits were increasing at a stable rate.
 
 ### **Output File**
 
-Output file link to go here
+https://github.com/nakul32430/CMPE283_Assignments/blob/main/Assingment2/output_1.png
+https://github.com/nakul32430/CMPE283_Assignments/blob/main/Assingment2/output_2.png
 
 ### **Issues faced**
 
-Issues faced while performing the activities go here
+- While building the kernel "No rule to make target 'debian/canonical-certs.pem', needed by 'certs/x509_certificate_list'"
+    - Resolved the issue by following the steps from https://askubuntu.com/questions/1329538/compiling-the-kernel-5-11-11
+- While rebooting the new kernel, ran into the issue of missing modules (cat /proc/modules; ls/dev)
+    - Steps to resolve the issue
+        - Rebooted into the old kernel using "Advanced Options"
+        - Ran sudo apt-get clean to clean up the package manager's cache
+        - Ran sudo update-initramfs -k 5.12.0-rc8 -u to re-build the initramfs file for the new kernel version 5.12.0-rc8
+        - Rebooted again successfully into the new kernel
