@@ -38,7 +38,17 @@ Self
     - The logic to increment the counter and calculate the elapsed time is implemented inside the vmx_handle_exit() function
 10. In cpuid.c, following changes were made
     - Inside the function kvm_emulate_cpuid(), conditional statement is introduced when register eax has the value 0x4FFFFFF to store the exit counter, higher 32 bits of elapsed time, and lower 32 bits of elapsed time in registers eax, ebx, and ecx respectively.
-11. Rebuild the kernel using the same make statements as in step 6    
+11. Rebuilt the kernel using the same make statements as in step 6
+12. Rebooted the VM
+13. Inside the VM, installed the nested VM using the following steps
+    - Ensure the nested virtualization is enabled in the outer VM by running the following command
+        - cat /sys/module/kvm_intel/parameters/nested
+    - Install virtual manager, qemu, and other dependencies
+        - sudo apt install libvirt-clients libvirt-daemon-system ovmf virt-manager qemu-system-x86
+    - Set up an inner VM using virtual manager and Ubuntu 20.0.4 ISO from assignment 1
+    - Installed CPUID in the inner VM
+        - sudo apt-get install cpuid
+14. Tested the code using **cpuid -l 0x4FFFFFE** in inner VM
 
 ### **Output File**
 
