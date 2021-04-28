@@ -21,13 +21,18 @@ Self
 4. Opened a terminal and cloned the forked repo using "**git clone https://github.com/nakul32430/linux.git**"
 5. In a separate terminal installed the necessary packages to build a kernel later on using the following command "**sudo apt-get install libncurses-dev gawk flex bison openssl libssl-dev dkms libelf-dev libudev-dev libpci-dev libiberty-dev autoconf**"
 6. Executed the below set of commands to build the kernel very first time (it took several hours to completely build it)
-- sudo bash
-- apt-get install build-essential kernel-package fakeroot libncurses5-dev libssl-dev ccache bison flex libelf-dev
-- uname -a (kernel version was “5.8.0-50-generic”)
-- cp /boot/config-5.8.0-50-generic ./.config
-- make oldconfig (and then just use the default for everything, don’t change anything – you can do this by holding down enter)
-- make -j 2 && make -j 2 modules && make modules_install && make install (replace 2 with the number of cpus in your vm)
-- reboot
+    - sudo bash
+    - apt-get install build-essential kernel-package fakeroot libncurses5-dev libssl-dev ccache bison flex libelf-dev
+    - uname -a (kernel version was “5.8.0-50-generic”)
+    - cp /boot/config-5.8.0-50-generic ./.config
+    - make oldconfig (and then just use the default for everything, don’t change anything – you can do this by holding down enter)
+    - make -j 2 && make -j 2 modules && make modules_install && make install (replace 2 with the number of cpus in your vm)
+    - reboot
+7. After reboot, verified the updated kernel version
+    - uname -a (kernel version for my execution was "5.12.0-rc8")
+8. Made changes to the following files to modify CPUID emulation code in order to print number of exits and elapsed time
+    - cpuid.c in linux/arch/x86/kvm
+    - vmx.c in linux/arch/x86/kvm/vmx
 
 
 ### **Output File**
