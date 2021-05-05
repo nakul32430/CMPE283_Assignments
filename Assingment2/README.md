@@ -48,7 +48,7 @@ Self
     - Set up an inner VM using virtual manager and Ubuntu 20.0.4 ISO from assignment 1
     - Installed CPUID in the inner VM
         - sudo apt-get install cpuid
-14. Tested the code using **cpuid -l 0x4FFFFFE** in inner VM
+14. Tested the code using **cpuid -l 0x4FFFFFF** in inner VM
 
 ### **Comment on the frequency of exits – does the number of exits increase at a stable rate? Or are there more exits performed during certain VM operations? Approximately how many exits does a full VM boot entail?**
 
