@@ -69,6 +69,7 @@ MODULE_LICENSE("GPL");
 /*Code Changes for CMPE283 Assignment2*/
 extern atomic_t exit_counter;
 extern atomic64_t time_elapsed_in_exit;
+extern atomic64_t exit_counter_arr[69];
 
 #ifdef MODULE
 static const struct x86_cpu_id vmx_cpu_id[] = {
@@ -5958,6 +5959,10 @@ static int __vmx_handle_exit(struct kvm_vcpu *vcpu, fastpath_t exit_fastpath)
 	
 	start_time = rdtsc();
 	atomic_inc(&exit_counter);
+	
+	if(exit_reason.basic <69){
+		atomic64_inc(&exit_counter_arr[exit_reason.basic]);
+	}
 
 	/*
 	 * Flush logged GPAs PML buffer, this will make dirty_bitmap more
@@ -6102,7 +6107,7 @@ static int __vmx_handle_exit(struct kvm_vcpu *vcpu, fastpath_t exit_fastpath)
 	end_time = rdtsc() - start_time;
 	atomic64_add(end_time, &time_elapsed_in_exit);
 	
-	printk("CPUID(0x4FFFFFFF),Number of Exits: %d, Cycles spent in exit: %llu", atomic_read(&exit_counter), atomic64_read(&time_elapsed_in_exit));
+	//printk("CPUID(0x4FFFFFFF),Number of Exits: %d, Cycles spent in exit: %llu", atomic_read(&exit_counter), atomic64_read(&time_elapsed_in_exit));
 	return exit_handler;
 
 unexpected_vmexit:

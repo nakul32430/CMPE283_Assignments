@@ -35,6 +35,8 @@ atomic_t exit_counter;
 EXPORT_SYMBOL(exit_counter);
 atomic64_t time_elapsed_in_exit;
 EXPORT_SYMBOL(time_elapsed_in_exit);
+atomic64_t exit_counter_arr[69];
+EXPORT_SYMBOL(exit_counter_arr);
 
 static u32 xstate_required_size(u64 xstate_bv, bool compacted)
 {
@@ -1153,6 +1155,26 @@ int kvm_emulate_cpuid(struct kvm_vcpu *vcpu)
 		ecx = low_32_bits;
 		edx = 0;
 		printk(KERN_INFO "elapsed time = %llu", exit_time);
+	}
+	if (eax == 0x4FFFFFFE) {
+		if (ecx == 35 || ecx == 38 || ecx == 42 || ecx == 65 || ecx > 68 || ecx < 0){
+			printk(KERN_INFO "Exit reason number = %u not defined in the SDM", ecx);
+			eax = 0;	
+			ebx = 0;
+			ecx = 0;
+			edx = 0xFFFFFFFF;
+		}
+		else if (ecx == 3 || ecx == 4 || ecx == 5 || ecx == 6 || ecx == 11 || ecx == 16 || ecx == 17 || ecx == 33 || ecx == 34 || ecx == 51 || ecx == 63 || ecx == 64 || ecx == 66){
+			printk(KERN_INFO "Exit reason number = %u not enabled in KVM", ecx);
+			eax = 0;
+			ebx = 0;
+			ecx = 0;
+			edx = 0;
+		}
+		else {
+			eax = atomic64_read(&exit_counter_arr[ecx]);
+			printk("CPUID(0x4FFFFFFE), exit number: %d, exits= %llu", ecx, atomic64_read(&exit_counter_arr[ecx]));
+		}
 	}
 	else {
 	    kvm_cpuid(vcpu, &eax, &ebx, &ecx, &edx, false);
