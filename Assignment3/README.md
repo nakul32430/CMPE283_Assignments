@@ -48,6 +48,7 @@ Based on the changes made, following was the observation.
 
 ### **Output File**
 
+All the output files are located at https://github.com/nakul32430/CMPE283_Assignments/tree/main/Assignment3/Output%20files
 
 ### **Issues faced**
 
