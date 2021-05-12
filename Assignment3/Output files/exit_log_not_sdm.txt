@@ -1,0 +1,9 @@
+[ 7939.933116] Exit reason number = 35 not defined in the SDM
+[ 7939.933632] Exit reason number = 35 not defined in the SDM
+[ 7946.683643] Exit reason number = 38 not defined in the SDM
+[ 7946.683960] Exit reason number = 38 not defined in the SDM
+[ 7955.006715] Exit reason number = 42 not defined in the SDM
+[ 7955.006992] Exit reason number = 42 not defined in the SDM
+[ 7999.061697] Exit reason number = 65 not defined in the SDM
+[ 7999.062126] Exit reason number = 65 not defined in the SDM
+[ 8007.387401] Exit reason number = 69 not defined in the SDM
