@@ -25,13 +25,16 @@ Self
 9. Repeat steps 2 to 4
 
 ### **What did you learn from the count of exits? Was the count what you expected? If not, why not?**
-
+The number of exits as expected was more when ept=0 (meaning shadow paging enabled) against ept =1 (when nested paging enabled)
 
 ### **What changed between the two runs (ept vs no-ept)?**
 
+When EPT was set to 0, shadow paging is enabled. With shadow paging, VMM is more involved. Increase in number of exits attributes to use of CR3 exits , Page Fault exits, and TLB flush exits. This can be verified in the logs that the corresponding exit numbers of 28, 14, 58 have more count for EPT=0 vs EPT=1.
 
 ### **Output File**
 
+With ept =1 : https://github.com/nakul32430/CMPE283_Assignments/blob/main/Assignment4/nested_paging_exit_log.txt
+With ept =0 : https://github.com/nakul32430/CMPE283_Assignments/blob/main/Assignment4/shadow_exit_log.txt
 
 ### **Issues faced**
 
