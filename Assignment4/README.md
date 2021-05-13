@@ -25,7 +25,7 @@ Self
 9. Repeat steps 2 to 4
 
 ### **What did you learn from the count of exits? Was the count what you expected? If not, why not?**
-The number of exits as expected was more when ept=0 (meaning shadow paging enabled) against ept =1 (when nested paging enabled)
+The number of exits as expected was more when ept=0 (meaning shadow paging enabled) against ept =1 (when nested paging enabled) as VMM is more involved in shadow paging with additional exit reasons enabled
 
 ### **What changed between the two runs (ept vs no-ept)?**
 
